@@ -46,6 +46,10 @@ class ProductController extends Controller
             'per_page' => $products->perPage(),
             'current_page' => $products->currentPage(),
             'last_page' => $products->lastPage(),
+            'first_page_url' => $products->url(1),
+            'last_page_url' => $products->url($products->lastPage()),
+            'next_page_url' => $products->nextPageUrl(),
+            'prev_page_url' => $products->previousPageUrl(),
         ]);
     }
 }
