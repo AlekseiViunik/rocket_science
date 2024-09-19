@@ -38,4 +38,135 @@ curl --location --globoff 'http://127.0.0.1:8000/products?properties[%D0%91%D1%8
 ```
 Ответ:
 ```json
+{
+    "products": [
+        {
+            "id": 91,
+            "name": "Напольная лампа",
+            "price": "8600.00",
+            "quantity": 8,
+            "properties": [
+                {
+                    "property_name": "Цвет",
+                    "value": "Красный"
+                },
+                {
+                    "property_name": "Бренд",
+                    "value": "Baga"
+                },
+                {
+                    "property_name": "Размер",
+                    "value": "Небольшой"
+                }
+            ]
+        },
+        {
+            "id": 71,
+            "name": "Настольная лампа",
+            "price": "1800.00",
+            "quantity": 5,
+            "properties": [
+                {
+                    "property_name": "Цвет",
+                    "value": "Красный"
+                },
+                {
+                    "property_name": "Бренд",
+                    "value": "Baga"
+                },
+                {
+                    "property_name": "Размер",
+                    "value": "Небольшой"
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "name": "Настольная лампа",
+            "price": "6800.00",
+            "quantity": 1,
+            "properties": [
+                {
+                    "property_name": "Цвет",
+                    "value": "Красный"
+                },
+                {
+                    "property_name": "Бренд",
+                    "value": "Baga"
+                },
+                {
+                    "property_name": "Размер",
+                    "value": "Небольшой"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Люстра",
+            "price": "3800.00",
+            "quantity": 2,
+            "properties": [
+                {
+                    "property_name": "Цвет",
+                    "value": "Красный"
+                },
+                {
+                    "property_name": "Бренд",
+                    "value": "Baga"
+                },
+                {
+                    "property_name": "Размер",
+                    "value": "Небольшой"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Люстра",
+            "price": "4800.00",
+            "quantity": 5,
+            "properties": [
+                {
+                    "property_name": "Цвет",
+                    "value": "Красный"
+                },
+                {
+                    "property_name": "Бренд",
+                    "value": "Baga"
+                },
+                {
+                    "property_name": "Размер",
+                    "value": "Небольшой"
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "name": "Напольная лампа",
+            "price": "6000.00",
+            "quantity": 7,
+            "properties": [
+                {
+                    "property_name": "Цвет",
+                    "value": "Красный"
+                },
+                {
+                    "property_name": "Бренд",
+                    "value": "Baga"
+                },
+                {
+                    "property_name": "Размер",
+                    "value": "Средний"
+                }
+            ]
+        }
+    ],
+    "total": 6,
+    "per_page": 40,
+    "current_page": 1,
+    "last_page": 1,
+    "first_page_url": "http://127.0.0.1:8000/products?page=1",
+    "last_page_url": "http://127.0.0.1:8000/products?page=1",
+    "next_page_url": null,
+    "prev_page_url": null
 ```
