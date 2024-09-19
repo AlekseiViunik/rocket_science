@@ -1,3 +1,9 @@
+# Оглавление
+- [Задание](#задание)
+- [Что сделано](#что-сделано)
+- [Используемый стек](#используемый-стек)
+- [Пример](#пример)
+
 ## Задание
 ```
 Тестовое задание для middle php
@@ -19,7 +25,7 @@
 ```
 
 
-## Что сделано:
+## Что сделано
 1. Добавлены модели: Product, Property, ProductPropertyValue.
 2. Добавлены связи "один ко многим" между Product и ProductPropertyValue и между Property и ProductPropertyValue.
 3. Реализована связь "многие ко многим" между Product и Property через таблицу ProductPropertyValue.
@@ -31,7 +37,13 @@
 9. Протестирован API через curl, проверена фильтрация товаров.
 10. Кастомизирован ответ API, чтобы вернуть только нужные поля товаров и их свойств.
 
-## Примеры:
+## Используемый стек
+![PHP version](https://img.shields.io/badge/PHP-8.2-green) 
+![Laravel version](https://img.shields.io/badge/Laravel-11-blue)
+![PostgreSQL version](https://img.shields.io/badge/PostgreSQL-14-yellow)
+![Ubuntu version](https://img.shields.io/badge/Ubuntu-22.04-red)
+
+## Пример
 Пример ГЕТ запроса:
 ```curl
 curl --location --globoff 'http://127.0.0.1:8000/products?properties[%D0%91%D1%80%D0%B5%D0%BD%D0%B4][]=Baga&properties[%D0%A6%D0%B2%D0%B5%D1%82][]=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9'
