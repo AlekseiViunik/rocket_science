@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('product_property_values', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained()->onDelete('cascade');  // Ссылка на товар
+            $table->foreignId('property_id')->constrained()->onDelete('cascade'); // Ссылка на свойство
+            $table->string('value'); // Значение свойства (например, "красный" для свойства "Цвет")
             $table->timestamps();
         });
     }
