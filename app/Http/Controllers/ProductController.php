@@ -23,9 +23,29 @@ class ProductController extends Controller
             }
         }
 
-        // Получаем товары с их свойствами и пагинацией по 40 элементов
         $products = $query->with('propertyValues.property')->paginate(40);
 
-        return response()->json($products);
+        $customResponse = $products->getCollection()->map(function ($product) {
+            return [
+                'id' => $product->id,
+                'name' => $product->name,
+                'price' => $product->price,
+                'quantity' => $product->quantity,
+                'properties' => $product->propertyValues->map(function ($propertyValue) {
+                    return [
+                        'property_name' => $propertyValue->property->name,
+                        'value' => $propertyValue->value,
+                    ];
+                }),
+            ];
+        });
+
+        return response()->json([
+            'products' => $customResponse,
+            'total' => $products->total(),
+            'per_page' => $products->perPage(),
+            'current_page' => $products->currentPage(),
+            'last_page' => $products->lastPage(),
+        ]);
     }
 }
